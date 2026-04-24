@@ -42,8 +42,8 @@ nav a {
 .hero {
   flex-grow: 1; 
   
-  /* PUT YOUR UPLOADED IMAGE NAME HERE: */
-  background-image: url('YOUR-IMAGE-NAME.jpg'); 
+  /* y8: */
+  background-image: url('y8.png'); 
   
   background-size: cover; 
   background-position: center; 
