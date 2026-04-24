@@ -5,25 +5,27 @@
   box-sizing: border-box;
 }
 
-/* Set up the whole page to take up the full screen height */
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #111;
   display: flex;
   flex-direction: column;
   min-height: 100vh; 
-  background-color: #f6f5f3; /* A slight off-white paper color */
 }
 
-/* --- THE NAVIGATION TABS --- */
+/* --- THE NAVIGATION TABS (White Top Bar) --- */
 header {
   display: flex;
   justify-content: space-between;
-  padding: 40px 60px;
-  position: absolute; /* This makes the menu float over the image */
+  align-items: center;
+  padding: 30px 50px;
   width: 100%;
-  top: 0;
-  z-index: 10; /* Keeps the menu on top of everything */
+  background-color: #f6f5f3; /* Keeps the top bar a clean off-white */
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.2rem;
 }
 
 nav a {
@@ -35,47 +37,55 @@ nav a {
   letter-spacing: 1px;
 }
 
-/* --- THE FULL SCREEN IMAGE AND BIG TEXT --- */
+/* --- THE FULL SCREEN IMAGE AND TEXT --- */
 .hero {
-  flex-grow: 1; /* Makes this section stretch to fill the screen */
+  flex-grow: 1; /* Makes the image stretch to fill the rest of the screen below the nav */
   
   /* y8: */
   background-image: url('y8.png'); 
   
-  background-size: cover; /* Forces the image to expand and fill the space */
-  background-position: center; /* Keeps the image centered */
+  background-size: cover; 
+  background-position: center; 
   background-repeat: no-repeat;
   
   display: flex;
-  align-items: center; /* Centers the text vertically */
+  flex-direction: column;
+  justify-content: center; /* Centers the main title vertically */
+  position: relative; /* This is the secret to pinning the quote to the bottom */
   padding: 60px;
-  margin-top: 80px; /* Pushes image down slightly below the floating header */
+}
+
+.hero-content {
+  margin-top: -60px; /* Bumps the main text up slightly so it feels perfectly centered */
 }
 
 .subtitle {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 10px;
   letter-spacing: 2px;
+  color: #ffffff; /* Changed to white */
 }
 
 .title {
-  font-size: 6rem; /* Huge font size */
+  font-size: 8rem; /* Huge font size */
   font-weight: 800;
   line-height: 0.9;
-  letter-spacing: -3px; /* Pulls the letters tighter together like the example */
+  letter-spacing: -3px; 
+  color: #ffffff; /* Changed to white */
 }
 
 /* --- THE BOTTOM QUOTE --- */
-footer {
-  background-color: #f6f5f3;
-  padding: 40px 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .quote {
-  font-family: Georgia, 'Times New Roman', serif; /* Gives the quote a classic look */
-  font-size: 1.8rem;
+  font-family: Georgia, 'Times New Roman', serif; 
+  font-size: 2.2rem;
   font-style: italic;
+  color: #ffffff; /* Changed to white */
+  
+  /* Pins the quote to the bottom center of the image */
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%); /* Perfectly centers it horizontally */
+  text-align: center;
+  width: 100%;
 }
