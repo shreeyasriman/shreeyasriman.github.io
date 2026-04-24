@@ -11,16 +11,17 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; 
+  background-color: #f6f5f3;
 }
 
-/* --- THE NAVIGATION TABS (White Top Bar) --- */
+/* --- THE NAVIGATION TABS --- */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px 50px;
   width: 100%;
-  background-color: #f6f5f3; /* Keeps the top bar a clean off-white */
+  background-color: #f6f5f3; 
   z-index: 10;
 }
 
@@ -37,12 +38,12 @@ nav a {
   letter-spacing: 1px;
 }
 
-/* --- THE FULL SCREEN IMAGE AND TEXT --- */
+/* --- THE FULL SCREEN IMAGE --- */
 .hero {
-  flex-grow: 1; /* Makes the image stretch to fill the rest of the screen below the nav */
+  flex-grow: 1; 
   
-  /* y8: */
-  background-image: url('y8.png'); 
+  /* PUT YOUR UPLOADED IMAGE NAME HERE: */
+  background-image: url('YOUR-IMAGE-NAME.jpg'); 
   
   background-size: cover; 
   background-position: center; 
@@ -50,28 +51,25 @@ nav a {
   
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers the main title vertically */
-  position: relative; /* This is the secret to pinning the quote to the bottom */
+  justify-content: center; 
+  position: relative; /* This is REQUIRED for the quote to stick to the bottom */
   padding: 60px;
 }
 
-.hero-content {
-  margin-top: -60px; /* Bumps the main text up slightly so it feels perfectly centered */
-}
-
+/* --- THE WHITE TEXT STYLES --- */
 .subtitle {
   font-size: 1.2rem;
   margin-bottom: 10px;
   letter-spacing: 2px;
-  color: #ffffff; /* Changed to white */
+  color: white; /* Forces text to white */
 }
 
 .title {
-  font-size: 8rem; /* Huge font size */
+  font-size: 8rem; 
   font-weight: 800;
   line-height: 0.9;
   letter-spacing: -3px; 
-  color: #ffffff; /* Changed to white */
+  color: white; /* Forces text to white */
 }
 
 /* --- THE BOTTOM QUOTE --- */
@@ -79,13 +77,12 @@ nav a {
   font-family: Georgia, 'Times New Roman', serif; 
   font-size: 2.2rem;
   font-style: italic;
-  color: #ffffff; /* Changed to white */
+  color: white; /* Forces text to white */
   
-  /* Pins the quote to the bottom center of the image */
+  /* This locks the quote to the bottom center of the image */
   position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%); /* Perfectly centers it horizontally */
-  text-align: center;
+  bottom: 40px; /* Pushes it 40px up from the very bottom edge */
+  left: 0;
   width: 100%;
+  text-align: center;
 }
