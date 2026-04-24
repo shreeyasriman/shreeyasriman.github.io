@@ -1,0 +1,14 @@
+body {
+  background-color: #1a1a1a; /* This makes the background dark gray */
+  color: #f4f4f4; /* This makes the text off-white */
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* A clean, modern font */
+  margin: 0 auto; /* This centers your whole layout */
+  max-width: 800px; /* Keeps your site from stretching too wide on big screens */
+  padding: 40px;
+}
+
+img {
+  border-radius: 8px; /* Slightly rounds the corners of your artwork */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.8); /* Adds a cool drop-shadow behind images */
+  max-width: 100%; /* Ensures your images don't break the layout */
+}
